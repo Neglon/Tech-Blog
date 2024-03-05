@@ -1,0 +1,23 @@
+<!--This html content is to build out a single post when a user has clicked on any of the posts from the index.handlebars page. -->
+<article>
+    <h1>{{post.title}}</h1>
+    <p>{{post.contents}}</p>
+    <p>Posted by {{post.user.username}} on {{post.dateCreated}}</p>
+</article>
+<div>
+    <h2>Comments</h2>
+    {{#each post.comments as |comment|}}
+        <div>
+            <p>{{comment.body}}</p>
+            <p>Comment by {{comment.user.username}} on {{comment.dateCreated}}</p>
+        </div>
+    {{else}}
+        <p>No comments yet.</p>
+    {{/each}}
+    {{#if loggedIn}}
+        <form action="/post/{{post.id}}/comments" method="POST">
+            <textarea name="commentBody"></textarea>
+            <button type="submit">Submit Comment</button>
+        </form>
+    {{/if}}
+</div>
