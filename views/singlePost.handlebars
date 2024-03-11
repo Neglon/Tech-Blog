@@ -1,22 +1,15 @@
-<article>
-    <h1>{{post.title}}</h1>
-    <p>{{post.contents}}</p>
-    <p>Posted by {{post.user.name}} on {{post.dateCreated}}</p>
-</article>
-<div>
-    <h2>Comments</h2>
-    {{#each post.comments as |comment|}}
-        <div>
-            <p>{{comment.body}}</p>
-            <p>Comment by {{comment.user.name}} on {{comment.dateCreated}}</p>
-        </div>
-    {{else}}
-        <p>No comments yet.</p>
-    {{/each}}
-    {{#if loggedIn}}
-        <form action="/post/{{post.id}}/comments" method="POST">
-            <textarea name="commentBody"></textarea>
-            <button type="submit">Submit Comment</button>
-        </form>
-    {{/if}}
-</div>
+{{> postinfo}}
+
+{{#if loggedIn}}
+<form>
+  <div>
+    <textarea name="comment"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments}}
