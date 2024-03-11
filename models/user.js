@@ -32,25 +32,26 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isComplex(value) {
-            const strongPasswordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            if (!strongPasswordPattern.test(value)) {
-              throw new Error('Password must include uppercase, lowercase, numbers, and special characters.');
-      }
-      }},
-  }},
+        len: [8],
+      },
+    },
+  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'user',
   }
 );
 
