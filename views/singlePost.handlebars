@@ -1,14 +1,14 @@
 <article>
     <h1>{{post.title}}</h1>
     <p>{{post.contents}}</p>
-    <p>Posted by {{post.user.username}} on {{post.dateCreated}}</p>
+    <p>Posted by {{post.user.name}} on {{post.dateCreated}}</p>
 </article>
 <div>
     <h2>Comments</h2>
     {{#each post.comments as |comment|}}
         <div>
             <p>{{comment.body}}</p>
-            <p>Comment by {{comment.user.username}} on {{comment.dateCreated}}</p>
+            <p>Comment by {{comment.user.name}} on {{comment.dateCreated}}</p>
         </div>
     {{else}}
         <p>No comments yet.</p>
