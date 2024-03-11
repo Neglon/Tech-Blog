@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog Site</title>
     <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    {{> header}}
+    <header>
+    <h1><a href="/"></a>Tech Blog</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if loggedIn}}
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+            {{else}}
+                <li><a href="/login">Sign In</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
 
     {{{body}}}
 
-    {{> footer}}
+    <footer>
+    <p>© 2024 Blog Site. All rights reserved. Created by Thomas Neylon</p>
+</footer>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>
