@@ -15,7 +15,7 @@
             <li><a href="/">Home</a></li>
             {{#if loggedIn}}
                 <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><a id="logout" href="/">Logout</a></li>
             {{else}}
                 <li><a href="/login">Sign In</a></li>
             {{/if}}
