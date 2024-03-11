@@ -1,17 +1,32 @@
 [
-    {
-      "title": "My First Blog Post",
-      "content": "This is the content of my first blog post.",
-      "userId": 1
-    },
-    {
-      "title": "My Second Blog Post",
-      "content": "This is the content of my second blog post.",
-      "userId": 2
-    },
-    {
-        "title": "My third Blog Post",
-        "content": "This is the content of my third blog post.",
-        "userId": 3
-      }
-  ]
+  {
+    "title": "The Future of Web Development",
+    "content": "Web development is rapidly evolving, with new frameworks and technologies emerging every year. This post explores upcoming trends and how they'll shape the future of web development.",
+    "userId": 1,
+    "publishedAt": "March 6, 2024"
+  },
+  {
+    "title": "Exploring Machine Learning in 2024",
+    "content": "Machine Learning continues to drive innovation across various sectors. This post delves into the latest ML trends and how they're being applied in technology today.",
+    "userId": 2,
+    "publishedAt": "March 7, 2024"
+  },
+  {
+    "title": "Introduction to Quantum Computing",
+    "content": "Quantum computing promises to revolutionize technology by making computations exponentially faster. Here's a beginner's guide to understanding quantum computing and its potential impacts.",
+    "userId": 3,
+    "publishedAt": "March 8, 2024"
+  },
+  {
+    "title": "The Impact of IoT on Everyday Life",
+    "content": "The Internet of Things (IoT) is becoming more prevalent, from smart homes to smart cities. This post examines how IoT is changing our daily lives and what to expect in the future.",
+    "userId": 2,
+    "publishedAt": "March 9, 2024"
+  },
+  {
+    "title": "Cybersecurity Trends in 2024",
+    "content": "As technology advances, so do the tactics of cybercriminals. This post highlights the latest cybersecurity trends and how to protect yourself in the digital age.",
+    "userId": 1,
+    "publishedAt": "March 10, 2024"
+  }
+]

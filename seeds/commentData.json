@@ -2,15 +2,35 @@
     {
       "content": "This is a comment on the first post.",
       "postId": 1,
-      "userId": 2
+      "userId": 2,
+      "createdAt": "March 10, 2024"
     },
     {
         "content": "Hey im commenting",
         "postId": 1,
-        "userId": 1
+        "userId": 1,
+        "createdAt": "March 10, 2024"
       }, {
         "content": "Nice Job",
         "postId": 1,
-        "userId": 3
-      }
+        "userId": 3,
+        "createdAt": "March 10, 2024"
+      },
+      {
+        "content": "This is a comment on the first post.",
+        "postId": 2,
+        "userId": 2,
+        "createdAt": "March 11, 2024"
+      },
+      {
+          "content": "Hey im commenting on this too",
+          "postId": 2,
+          "userId": 1,
+          "createdAt": "March 11, 2024"
+        }, {
+          "content": "Really Cool stuff!!!",
+          "postId": 2,
+          "userId": 3,
+          "createdAt": "March 11, 2024"
+        }
   ]
